@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.min.js"></script>
+    <script src="https://unpkg.com/brain.js@1.6.0/browser.js"></script>
+    <meta charset="utf-8" />
+    <style>
+        body,html {
+            color:white;
+            margin: 0;
+            padding: 0;
+            background-color: #8D6E63;
+            text-align: center;
+        }
+        
+        canvas {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        button {
+            background-color: #795548;
+            width: 90px;
+            height: 50px;
+            box-shadow: 8px 8px #494949;
+            box-sizing: border-box;
+            color: azure;
+            font-size: 20px;
+            font-weight: bold;
+            outline: none;
+            animation-delay: 200s;
+            border: 0px;
+            margin: 20px;
+        }
+        
+        .hide {
+            transform: translate(8px, 8px);
+            box-shadow: none
+        }
+        
+        #btns {
+            position: absolute;
+            left: 50%;
+            top: 15%;
+            transform: translate(-50%, -50%);
+        }
+        
+        input {
+            width: 320px;
+            height: 50px;
+            border: 1px solid #fffffed0;
+            font-size: 18px;
+            text-indent: 10px;
+            outline: #795548;
+            color: #795548;
+        }
+        
+        i {
+            font-size: 22px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="btns">
+        <button id="btnn">Set</button>
+        <input type="text" placeholder="Enter The Name Of model : " id="field">
+        <br>
+        <button id="tra">Train</button>
+        <button id="tst">Test</button>
+        <button id="clr"><i class="fas fa-trash-alt"></i></button>
+    </div>
+    <script src="sketch.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#btnn').click(function() {
+                $(this).addClass('hide').delay(280).queue(function(next) {
+                    $(this).removeClass('hide');
+                    next();
+                });
+            });
+            $('#clr').click(function() {
+                $(this).addClass('hide').delay(280).queue(function(next) {
+                    $(this).removeClass('hide');
+                    next();
+                });
+            });
+            $('#tst').click(function() {
+                $(this).addClass('hide').delay(280).queue(function(next) {
+                    $(this).removeClass('hide');
+                    next();
+                });
+            });
+            $('#tra').click(function() {
+                $(this).addClass('hide').delay(280).queue(function(next) {
+                    $(this).removeClass('hide');
+                    next();
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
